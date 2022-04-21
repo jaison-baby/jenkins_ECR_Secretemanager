@@ -1,0 +1,9 @@
+For this pipeline script we need to be install ecr & aws secret manager plugin in jenkins
+For this we need to attach iam role with ecr and aws secret manager polices to jenkins running instance.
+we need to assign the iam role to given permission polices ie , SecretsManagerReadWrite,AmazonEC2ContainerRegistryFullAccess.
+Environment variables are delcared in AWSSecret manager.
+environment varibale should have AWS_ACCOUNT_ID,AWS_DEFAULT_REGION,IMAGE_REPO_NAME,jeniknspipleinjenkinsdemo & IMAGE_TAG this details avail when we create ECR repositories in AWS ECR Servicec. This above varible and its values should be added in aws Secrets.
+secret values are getting from secret manager and assigning to variables and passing to each steps via variables.
+Then login to ECR
+Building the Docker Image
+Tagging the Docker image, pusing and pulling the image.
